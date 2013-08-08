@@ -1,6 +1,7 @@
 'use strict';
 
 var gaunt = require('../lib/gaunt.js');
+var fs = require('fs');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -24,13 +25,12 @@ var gaunt = require('../lib/gaunt.js');
 
 exports['read'] = {
   setUp: function(done) {
-    // setup here
     done();
   },
   'no args': function(test) {
     test.expect(1);
-    // tests here
-    test.equal(gaunt('test/helloworld.gtf'), 'Hello world!', 'should be "Hello, world!"');
+    var input = fs.readFileSync('test/fixtures/helloworld.gtf', 'utf8');
+    test.equal(gaunt(input), 'Hello world!', 'should be "Hello, world!"');
     test.done();
   },
 };

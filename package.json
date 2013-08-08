@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git://github.com/dariusk/gaunt.git"
   },
+  "bin": {
+    "gaunt": "bin/gaunt"
+  },
   "bugs": {
     "url": "https://github.com/dariusk/gaunt/issues"
   },
