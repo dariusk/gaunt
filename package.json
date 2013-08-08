@@ -1,7 +1,7 @@
 {
   "name": "gaunt-render",
   "description": "The most aesthetically minimalist markup language ever.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/dariusk/gaunt",
   "author": {
     "name": "Darius Kazemi",
