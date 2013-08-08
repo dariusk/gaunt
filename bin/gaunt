@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var gaunt = require('..');
+var fileNames = process.argv.slice(2);
+var fs = require('fs');
+
+if (fileNames[0] === '--help' || fileNames[0] === '-h') {
+  console.log('Usage: gaunt [FILE] ...');
+  console.log('Render FILE(s), or standard input, to standard output');
+  process.exit(0);
+}
+
+if (fileNames.length) {
+  fileNames.map(function(fileName) {
+    return fs.readFileSync(fileName, 'utf8');
+  }).forEach(function(data) {
+    console.log(gaunt(data));
+  });
+  process.exit(0);
+}
+
+process.stdin.on('data', function(data) {
+  process.stdout.write(gaunt(data.toString()));
+});
+process.stdin.on('end', process.stdout.end);
