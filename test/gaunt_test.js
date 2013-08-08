@@ -30,7 +30,7 @@ exports['read'] = {
   'no args': function(test) {
     test.expect(1);
     // tests here
-    test.equal(gaunt.render('test/helloworld.gtf'), 'Hello world!', 'should be "Hello, world!"');
+    test.equal(gaunt('test/helloworld.gtf'), 'Hello world!', 'should be "Hello, world!"');
     test.done();
   },
 };
