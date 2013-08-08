@@ -3,14 +3,14 @@
 The most aesthetically minimalist markup language ever.
 
 ## Getting Started
-**To use programatically (from Node.js):** Install the module with: `npm install gaunt`
+**To use programatically (from Node.js):** Install the module with: `npm install gaunt-render`
 
 ```javascript
-var gaunt = require('gaunt');
-var renderedOutput = gaunt('path/to/file');
+var gaunt = require('gaunt-render');
+var renderedOutput = gaunt('	  				 '); // "a"
 ```
 
-**To use from the command line:** Install the module with: `npm install -g gaunt`
+**To use from the command line:** Install the module with: `npm install -g gaunt-render`
 
 ```shell
 # Input file(s)
