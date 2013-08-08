@@ -7,7 +7,7 @@ Install the module with: `npm install gaunt`
 
 ```javascript
 var gaunt = require('gaunt');
-var renderedOutput = gaunt.render('path/to/file');
+var renderedOutput = gaunt('path/to/file');
 ```
 
 ## Contributing
